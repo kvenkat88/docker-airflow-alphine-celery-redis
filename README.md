@@ -1,4 +1,19 @@
 # docker-airflow
+
+### Pandas build time reduction
+https://news.ycombinator.com/item?id=22182226
+
+https://stackoverflow.com/questions/49037742/why-does-it-take-ages-to-install-pandas-on-alpine-linux
+
+https://pythonspeed.com/docker/
+
+https://stackoverflow.com/questions/49037742/why-does-it-take-ages-to-install-pandas-on-alpine-linux/50443531#50443531
+
+We can use alphine but we have to download and give reference to packages needed, refer the below mentioned link,
+https://github.com/astronomer/ap-airflow
+
+While building the pandas, numpy and other python scientific libraries, alphine image taking much amount of time to build. This is due to usuage of musl-dev library, busybox instead of glibc(debian,fedora,ubuntu are using). Debian, ubuntu, etc python pip will directly fetch the python wheel of particular package. Alphine fetches the source code and then make the wheel for building the image. So Alphine is not suggested(refer https://pythonspeed.com/docker/)
+
 ## Informations
 
 * Based on Python (3.7-slim-buster) official Image [python:3.7-slim-buster](https://hub.docker.com/_/python/) and uses the official [Postgres](https://hub.docker.com/_/postgres/) as backend and [Redis](https://hub.docker.com/_/redis/) as queue
@@ -159,3 +174,31 @@ it explicitly:
 | `REDIS_DBNUM`     | `1`           | Database number                |
 
 You can also use those variables to adapt your compose file to match an existing Redis instance managed elsewhere.
+
+# Dockerfile Creation Tips
+
+https://itnext.io/how-to-use-docker-multi-stage-build-to-create-optimal-images-for-dev-and-production-568c19a39de8
+
+https://blog.gds-gov.tech/writing-effective-docker-images-more-efficiently-bf0129c3293b
+
+https://github.com/apache/airflow/issues/8605
+
+https://medium.com/@xnuinside/quick-tutorial-apache-airflow-with-3-celery-workers-in-docker-composer-9f2f3b445e4
+
+https://github.com/barrachri/easy-airflow
+
+https://hub.docker.com/r/drunkar/airflow-alpine/dockerfile
+
+# Dockerfile LOg Rotator and Retention
+
+https://github.com/teamclairvoyant/airflow-maintenance-dags/blob/master/log-cleanup/airflow-log-cleanup.py
+
+https://github.com/teamclairvoyant/airflow-maintenance-dags/tree/master/db-cleanup
+
+https://github.com/teamclairvoyant/airflow-maintenance-dags/tree/master/log-cleanup
+
+https://github.com/astronomer/ap-airflow/blob/master/1.10.12/alpine3.10/include/clean-airflow-logs
+
+
+
+
