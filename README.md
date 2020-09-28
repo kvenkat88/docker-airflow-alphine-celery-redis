@@ -1,11 +1,14 @@
 # docker-airflow
 
-### Pandas build time reduction
+### Pandas or numpy or any of data science projects build time increase when using pip install <data science package) with alphine
+
+Below links discuss about why it is taking more time for building the docker image,
+
 https://news.ycombinator.com/item?id=22182226
 
 https://stackoverflow.com/questions/49037742/why-does-it-take-ages-to-install-pandas-on-alpine-linux
 
-https://pythonspeed.com/docker/
+https://pythonspeed.com/docker/ (They are suggesting alphine image is not a good candidate for production)
 
 https://stackoverflow.com/questions/49037742/why-does-it-take-ages-to-install-pandas-on-alpine-linux/50443531#50443531
 
@@ -13,6 +16,8 @@ We can use alphine but we have to download and give reference to packages needed
 https://github.com/astronomer/ap-airflow
 
 While building the pandas, numpy and other python scientific libraries, alphine image taking much amount of time to build. This is due to usuage of musl-dev library, busybox instead of glibc(debian,fedora,ubuntu are using). Debian, ubuntu, etc python pip will directly fetch the python wheel of particular package. Alphine fetches the source code and then make the wheel for building the image. So Alphine is not suggested(refer https://pythonspeed.com/docker/)
+
+
 
 ## Informations
 
