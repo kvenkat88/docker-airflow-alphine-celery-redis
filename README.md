@@ -206,27 +206,41 @@ https://github.com/astronomer/ap-airflow/blob/master/1.10.12/alpine3.10/include/
 
 # Redis Warnings fix
 https://stackoverflow.com/questions/11342167/how-to-increase-ulimit-on-amazon-ec2-instance
+
 https://github.com/redis/redis/issues/3166
 
 #### Main Reference for Redis Issue:
 
 https://stackoverflow.com/questions/40683285/max-file-descriptors-4096-for-elasticsearch-process-is-too-low-increase-to-at
+
 https://stackoverflow.com/questions/46771233/max-file-descriptors-for-elasticsearch-process-is-too-low 
+
 https://github.com/redis/redis/issues/6123
+
 https://github.com/docker-library/redis/issues/35
+
 https://stackoverflow.com/questions/56297979/redis-5-0-5-warning-the-tcp-backlog-setting-of-511-cannot-be-enforced-because
+
 https://stackoverflow.com/questions/39329732/specify-sysctl-values-using-docker-compose
+
 https://serverfault.com/questions/716982/how-to-raise-max-no-of-file-descriptors-for-daemons-running-on-debian-jessie
+
 https://stackoverflow.com/questions/30063907/using-docker-compose-how-to-execute-multiple-commands
+
 https://github.com/bkuhl/redis-overcommit-on-host
+
 http://blog.cspub.net/post/7
 
 https://github.com/jghoman/awesome-apache-airflow/blob/master/README.md
+
 https://eng.lyft.com/running-apache-airflow-at-lyft-6e53bb8fccff
 
 https://vitux.com/how-to-install-vim-editor-on-debian/
-https://askubuntu.com/questions/988266/systemctl-command-not-found-on-ubuntu-16-04 -->
+
+https://askubuntu.com/questions/988266/systemctl-command-not-found-on-ubuntu-16-04
+
 https://r-future.github.io/post/how-to-fix-redis-warnings-with-docker
+
 https://github.com/artsy/echo/blob/master/docker-compose.yml
 
 
